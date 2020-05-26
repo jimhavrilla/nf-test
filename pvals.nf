@@ -14,7 +14,7 @@ process significant {
 
   script: // runs the script on each file in channel async
   """
-  awk 'FNR>2{if (\$5<=5e-8) print \$0,FILENAME}' $x > snps
+  awk 'FNR>2{if (\$5<=5e-8){split(FILENAME,a,"."); print \$0,a[1]}}' $x > snps
   """
 }
 
