@@ -33,6 +33,8 @@ process significant {
   input:
 ```
 
+I have also added a `nextflow.config` file that nextflow looks for in the folder automatically, and you can use `conda` to run the script with `-profile conda` (I also added `testenv.yaml` to install `bash` and `java`), `docker` with `-profile droplet`, `sge` in the cluster with `-profile cluster`, and you can just run in the folder without specifying a profile, or using `-profile standard`.  It's pretty great to be able to port your code to any platform.
+
 
 If on the CHOP cluster (tested on Biocluster), you can just create a nextflow.config file or add the information under the process with:
 
